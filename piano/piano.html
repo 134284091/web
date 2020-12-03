@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<title>钢琴</title>
+<meta charset = "utf-8">
+<meta name = "keywords" content = "piano">
+
+<style type = "text/css">
+*{
+    margin: 0px;
+    padding:0px;
+    
+}
+.topImage{
+    width:1930px;
+    height:175px;
+    margin:0auto;
+    background:url(material/1.png) center top no-repeat;
+    opacity: 0.3;
+    background-size: 1950px 250px;
+}
+.menu{
+    padding-top: 0px;
+    width:1000px;
+    height:35px;
+}
+.menu ul{
+    list-style: none;
+    position: absolute;
+    left: 34%;
+}
+.menu ul li{
+    position:relative;
+    width:120px;
+    line-height: 35px;
+    text-align:center;
+    float:left;
+}
+.menu table{
+    position:absolute;
+    top:35px;
+    left:0;
+}
+.menu ul li a{
+    line-height:35px;
+    display:block;
+    text-align:center;
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
+}
+.menu ul li a:hover{
+    color: rgb(78, 60, 60);
+    background: url() no-repeat;
+}
+.menu ul li ul{
+    width:120px;
+    visibility: hidden;
+    position: absolute;
+    text-align: left;
+    left:0px;
+    top: 0px;
+    background-color: #ffffff;
+}
+.menu ul li:hover ul{
+    visibility: visible;
+}
+.menu ul li ul li ul{
+    width:120px;
+    visibility: hidden;
+    position: absolute;
+    text-align: left;
+    left:121px;
+    top: 0px;
+    background-color: #ffffff;
+}
+.menu ul li ul li:hover ul {
+    visibility: visible;
+}
+.menu ul li ul li{
+    height:35px;
+    line-height:35px;
+    border-bottom: 1px solid;
+    font-size: 14px;
+}
+.menu ul li ul li a{
+    display: block;
+    color: #666;
+}
+.menu ul li ul li a:hover{
+    background:#e7cba8;
+}
+    .theme{
+        padding-left: 50%;
+        padding-top: 3%;
+        font-size: 25px;
+        color: aliceblue;
+    }
+    .content img{
+        float:left;
+        height:260px;
+        padding-left: 20%;
+        padding-right: 100px;
+        padding-bottom: 7px;
+        
+    }
+    .p1{
+        padding-left: 40%;
+        padding-right: 20%;
+        padding-top: 3%;
+        font-size: 20px;
+        color: aliceblue;
+    }
+    .p2{
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 3%;
+        font-size: 20px;
+        color: aliceblue;
+    }
+    .content audio{
+        padding-left: 20%;
+    }
+    body{
+        background-image: url(material/4.jpg);
+    }
+</style>
+<div class = "topImage"></div>
+<div class = "top">
+    <div class = "menu">
+        <ul>
+            <li><a href = "../index.html">首页</a></li>
+            <li><a href = "">乐器分类
+                <table><tr><td><ul>
+                    <li><a href = "">钢琴风琴</a></li>
+                    <li><a href = "">交响管弦</a></li>
+                    <li><a href = "">民族乐器</a></li>
+                    <li><a href = "">打击鼓组</a></li>
+                </ul></td></tr></table>
+            </a></li>
+            <li><a href = "">讨论区</a></li>
+            <li><a href = "">乐理</a></li>
+            <li><a href = "../feedback/feedback.html">反馈</a></li>
+        </ul>
+    </div>
+</div>
+<div class = "theme"><h1>钢琴</h1></div>
+<div class = "content">
+    <img src="material/钢琴.png" alt = "加载失败">
+    <p class = "p1">钢琴，英文piano，是源自西洋古典音乐中的一种键盘乐器，普遍用于独奏、重奏、伴奏等演出，用于作曲和排练音乐十分方便。弹奏者通过按下键盘上的琴键，牵动钢琴里面包着绒毡的小木槌，继而敲击钢丝弦发出声音。钢琴被称为乐器之王。</p>
+    <p class = "p2" >现代钢琴主要分为立式钢琴和三角钢琴。音乐会所用的大三角钢琴是乐器中的庞然大物，有9英尺长，最重的可达79吨。迄今为止最昂贵的钢琴是一架1888年生产的斯坦威（steinway）牌 三角钢琴，1980年在纽约以18万英镑的高价被拍卖。钢琴因其独特的音响，88个琴键的全音域，历来受到作曲家的钟爱。在流行、摇滚、爵士以及古典等几乎所有的音乐形式中都扮演了重要的角色。</p>
+    <audio controls>
+        <source src="material/钢琴.mp3" typr="audio/ogg">
+    </audio>
+</div>
