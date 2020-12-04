@@ -250,7 +250,7 @@
     <div class = "row">
         <a href = ""><img src="material/instrument/中提琴.png" alt = "加载失败" class = "image"></a>
         <a href = ""><img src="material/instrument/低音提琴.png" alt = "加载失败" class = "image"></a>
-        <a href = ""><img src="material/instrument/单簧管.png " alt = "加载失败" class = "image">></a>
+        <a href = ""><img src="material/instrument/单簧管.png " alt = "加载失败" class = "image"></a>
     </div>
     <div class = "row">
         <a href = ""><img src="material/instrument/双簧管.png" alt = "加载失败" class = "image"></a>
