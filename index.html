@@ -18,7 +18,7 @@
     
     #timeBox{
         color: #ffffff;
-        padding-left: 2%;
+        padding-left: 2.2%;
     }
 
     #user{
@@ -30,19 +30,17 @@
     #featureCarousel{
         position: absolute;
         background-color: #e7cba8;
-        right: 25%;
+        right: 18%;
         height: 0%;
     }
 
     .menu{
-        padding-top: 0px;
-        width:1000px;
         height:35px;
     }
     .menu ul{
         list-style: none;
         position: absolute;
-        left: 40%;
+        left: 35%;
     }
     .menu ul li{
         position:relative;
@@ -110,8 +108,10 @@
     }
     .instrument{
         display:flex;
+        position: relative;
         flex-wrap:wrap;
-        padding-top: 350px;
+        padding-top: 250px;
+
     }
     .row{
         flex-basis:100%;
@@ -120,8 +120,8 @@
     }
     .image{
         margin: 20px;
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
     }
 
     </style>
@@ -144,14 +144,15 @@
     <div class = "menu">
         <ul>
             <li><a href = "index.html">首页</a></li>
-            <li><a href = "">乐器分类
+            <li><a href = "#">乐器分类
                 <table><tr><td><ul>
-                    <li><a href = "">钢琴风琴</a></li>
-                    <li><a href = "">交响管弦</a></li>
-                    <li><a href = "">民族乐器</a></li>
-                    <li><a href = "">打击鼓组</a></li>
+                    <li><a href = "#">钢琴风琴</a></li>
+                    <li><a href = "#">交响管弦</a></li>
+                    <li><a href = "#">民族乐器</a></li>
+                    <li><a href = "#">打击鼓组</a></li>
                 </ul></td></tr></table>
             </a></li>
+            <li><a href = "music theory/music theory.html">乐理知识</a></li>
             <li><a href = "feedback/feedback.html">反馈</a></li>
         </ul>
     </div>
@@ -159,7 +160,7 @@
 
 <div id="featureCarousel" class="featureCarousel">
     <div class="feature">
-        <img alt="Image Caption" src="images/sample1.jpg">
+        <img alt="Image Caption" src="material/instrument/sample1.jpg">
         <div>
             <p>
                 钢琴，英文piano，是源自西洋古典音乐中的一种键盘乐器，普遍用于独奏、重奏、伴奏等演出，用于作曲和排练音乐十分方便。弹奏者通过按下键盘上的琴键，牵动钢琴里面包着绒毡的小木槌，继而敲击钢丝弦发出声音。钢琴被称为乐器之王。
@@ -167,7 +168,7 @@
         </div>
     </div>
     <div class="feature">
-        <img alt="Image Caption" src="images/sample2.jpg">
+        <img alt="Image Caption" src="material/instrument/sample2.jpg">
         <div>
             <p>
                 小提琴广泛流传于世界各国，是现代管弦乐队弦乐组中最主要的乐器。它在器乐中占非常重要的地位，是现代交响乐队的支柱，也是具有高难度演奏技巧的独奏乐器，与钢琴、古典吉他并称为世界三大乐器。
@@ -175,7 +176,7 @@
         </div>
     </div>
     <div class="feature">
-        <img alt="Image Caption" src="images/sample3.jpg">
+        <img alt="Image Caption" src="material/instrument/sample3.jpg">
         <div>
             <p>
                 笛子是迄今为止发现的最古老的汉族乐器 ，也是汉族乐器中最具代表性最有民族特色的吹奏乐器。
@@ -240,37 +241,48 @@
 
 </script>
 
+<style>
+    .instrument a:hover img{
+        transform: scale(1.1,1.1);
+        transition: 0.3s;
+    } 
+    .instrument a:hover p{color: #a1c1ca;}
+    #instru{
+        position: relative;
+        left: 40%;
+    }
+</style>
 <div class = "instrument">
     <div class = "row">
-        <a href = "piano/piano.html"><img src="material/instrument/钢琴.png" alt = "加载失败" class = "image"></a>
-        <a href = "piano/piano.html"><img src="material/instrument/巴松.png" alt = "加载失败" class = "image"></a>
-        <a href = "piano/piano.html"><img src="material/instrument/二胡.png" alt = "加载失败" class = "image"></a>
+        <a href = "piano/piano.html"><img src="material/instrument/钢琴.png" alt = "加载失败" class = "image"><p id="instru">钢琴</p></a>
+        <a href = "piano/piano.html"><img src="material/instrument/巴松.png" alt = "加载失败" class = "image"><p id="instru">巴松</p></a>
+        <a href = "piano/piano.html"><img src="material/instrument/二胡.png" alt = "加载失败" class = "image"><p id="instru">二胡</p></a>
     </div>
     <div class = "row">
-        <a href = ""><img src="material/instrument/中提琴.png" alt = "加载失败" class = "image"></a>
-        <a href = ""><img src="material/instrument/低音提琴.png" alt = "加载失败" class = "image"></a>
-        <a href = ""><img src="material/instrument/单簧管.png " alt = "加载失败" class = "image"></a>
+        <a href = ""><img src="material/instrument/中提琴.png" alt = "加载失败" class = "image"><p id="instru">中提琴</p></a>
+        <a href = ""><img src="material/instrument/低音提琴.png" alt = "加载失败" class = "image"><p id="instru">低音提琴</p></a>
+        <a href = ""><img src="material/instrument/单簧管.png " alt = "加载失败" class = "image"><p id="instru">单簧管</p></a>
     </div>
     <div class = "row">
-        <a href = "piano/piano.html"><img src="material/instrument/双簧管.png" alt = "加载失败" class = "image"></a>
-        <a href="piano/piano.html"><img src="material/instrument/古筝.png" alt = "加载失败" class = "image"></a>
-        <a href="piano/piano.html"><img src="material/instrument/大提琴.png" alt = "加载失败" class = "image"></a>
+        <a href = "piano/piano.html"><img src="material/instrument/双簧管.png" alt = "加载失败" class = "image"><p id="instru">双簧管</p></a>
+        <a href="piano/piano.html"><img src="material/instrument/古筝.png" alt = "加载失败" class = "image"><p id="instru">古筝</p></a>
+        <a href="piano/piano.html"><img src="material/instrument/大提琴.png" alt = "加载失败" class = "image"><p id="instru">大提琴</p></a>
     </div>
     <div class = "row">
-        <a href = "piano/piano.html"><img src="material/instrument/小号.png" alt = "加载失败" class = "image"></a>
-        <a href="piano/piano.html"><img src="material/instrument/小提琴.png" alt = "加载失败" class = "image"></a>
-        <a href="piano/piano.html"><img src="material/instrument/竖琴.png" alt = "加载失败" class = "image"></a>
+        <a href = "piano/piano.html"><img src="material/instrument/小号.png" alt = "加载失败" class = "image"><p id="instru">小号</p></a>
+        <a href="piano/piano.html"><img src="material/instrument/小提琴.png" alt = "加载失败" class = "image"><p id="instru">小提琴</p></a>
+        <a href="piano/piano.html"><img src="material/instrument/竖琴.png" alt = "加载失败" class = "image"><p id="instru">竖琴</p></a>
     </div>
 </div>
 
 <style>
     .sidebar{
-        background: #333645;
         width: 35px; 
         position: fixed; 
         left: 0; top: 0; height: 100%; 
         overflow: hidden; 
         transition:width 0.7s;
+        background-color: rgba(6, 8, 22, 0.5);
     }
 
     .sidebar:hover
@@ -281,24 +293,88 @@
     .sidebar h2{
         color: aliceblue;
         position: relative;
-        left: 18%;
+        left: 10%;
     }
 
-    .sidebar ul li 
-    {margin-top: 10%;list-style: none;}a{
+    .sidebar ul li {
+        margin-top: 10%;list-style: none;text-align: center;
+    }
+    .sidebar ul li a{
+        position: relative;
         color: aliceblue;
         text-decoration: none;
-        font-size: 20px;
-    }
+        font-size: 120%;
 
+    }
+    .sidebar ul li a:hover{
+        font-size: 128%;
+        transition: 0.3s;
+    }
+    #sidecontent{
+        position: relative;
+        top: 10%;
+    }
+    #s1 ul li a{
+        color: white;
+        display: none;
+    }
+    #s1:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #s2 ul li a{
+        color: white;
+        display: none;
+    }
+    #s2:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #s3 ul li a{
+        color: white;
+        display: none;
+    }
+    #s3:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #s4 ul li a{
+        color: white;
+        display: none;
+    }
+    #s4:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #sidecontent ul li ul li a:hover{
+        color: rgb(91, 108, 165);
+    }
 </style>
 
 <div class="sidebar">
-    <h2>乐器分类</h2>
-    <ul>
-        <li><a href="">钢琴风琴</a></li>
-        <li><a href="">交响管弦</a></li>
-        <li><a href="">民族乐器</a></li>
-        <li><a href="">打击鼓组</a></li>
-    </ul>
+    <div id="sidecontent">
+        <h2>乐器分类</h2>
+        <ul>
+            <li id="s1"><a href="#">钢琴风琴</a><ul>
+                <li><a href="piano/piano.html">钢琴</a></li>
+                <li><a href="piano/piano.html">风琴</a></li>
+            </ul></li>
+            <li id="s2"><a href="#">交响管弦</a><ul>
+                <li><a href="piano/piano.html">双簧管</a></li>
+                <li><a href="piano/piano.html">小提琴</a></li>
+                <li><a href="piano/piano.html">中提琴</a></li>
+                <li><a href="piano/piano.html">大提琴</a></li>
+                <li><a href="piano/piano.html">铜管</a></li>
+            </ul></li>
+            <li id="s3"><a href="#">民族乐器</a><ul>
+                <li><a href="piano/piano.html">笛子</a></li>
+                <li><a href="piano/piano.html">古筝</a></li>
+                <li><a href="piano/piano.html">二胡</a></li>
+            </ul></li>
+            <li id="s4"><a href="#">打击鼓组</a><ul>
+                <li><a href="piano/piano.html">架子鼓</a></li>
+                <li><a href="piano/piano.html">太鼓</a></li>
+            </ul></li>
+        </ul>
+    </div>
 </div>

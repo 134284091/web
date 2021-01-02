@@ -9,23 +9,16 @@
     padding:0px;
     
 }
-.topImage{
-    width:1930px;
-    height:175px;
-    margin:0auto;
-    background:url(material/1.png) center top no-repeat;
-    opacity: 0.3;
-    background-size: 1950px 250px;
-}
+
 .menu{
-    padding-top: 0px;
+    padding-top: 100px;
     width:1000px;
     height:35px;
 }
 .menu ul{
     list-style: none;
     position: absolute;
-    left: 34%;
+    left: 37%;
 }
 .menu ul li{
     position:relative;
@@ -106,48 +99,160 @@
         padding-left: 40%;
         padding-right: 20%;
         padding-top: 3%;
-        font-size: 20px;
+        font-size: 17px;
         color: aliceblue;
     }
     .p2{
         padding-left: 20%;
         padding-right: 20%;
         padding-top: 3%;
-        font-size: 20px;
+        font-size: 17px;
         color: aliceblue;
     }
     .content audio{
         padding-left: 20%;
+        margin-top: 20px;
     }
     body{
         background-image: url(material/4.jpg);
     }
 </style>
+
+<script>
+    function bs()
+    {
+        alert("这只是个摆设!");
+    }
+</script>
+
 <div class = "topImage"></div>
 <div class = "top">
     <div class = "menu">
         <ul>
             <li><a href = "../index.html">首页</a></li>
-            <li><a href = "">乐器分类
+            <li><a href = "#">乐器分类
                 <table><tr><td><ul>
-                    <li><a href = "">钢琴风琴</a></li>
-                    <li><a href = "">交响管弦</a></li>
-                    <li><a href = "">民族乐器</a></li>
-                    <li><a href = "">打击鼓组</a></li>
+                    <li><a href = "#" onclick="bs()">钢琴风琴</a></li>
+                    <li><a href = "#" onclick="bs()">交响管弦</a></li>
+                    <li><a href = "#" onclick="bs()">民族乐器</a></li>
+                    <li><a href = "#" onclick="bs()">打击鼓组</a></li>
                 </ul></td></tr></table>
             </a></li>
-            <li><a href = "">讨论区</a></li>
-            <li><a href = "">乐理</a></li>
+            <li><a href = "../music theory/music theory.html">乐理</a></li>
             <li><a href = "../feedback/feedback.html">反馈</a></li>
         </ul>
     </div>
 </div>
-<div class = "theme"><h1>钢琴</h1></div>
+<div class = "theme"><h2>钢琴</h2></div>
 <div class = "content">
     <img src="material/钢琴.png" alt = "加载失败">
     <p class = "p1">钢琴，英文piano，是源自西洋古典音乐中的一种键盘乐器，普遍用于独奏、重奏、伴奏等演出，用于作曲和排练音乐十分方便。弹奏者通过按下键盘上的琴键，牵动钢琴里面包着绒毡的小木槌，继而敲击钢丝弦发出声音。钢琴被称为乐器之王。</p>
     <p class = "p2" >现代钢琴主要分为立式钢琴和三角钢琴。音乐会所用的大三角钢琴是乐器中的庞然大物，有9英尺长，最重的可达79吨。迄今为止最昂贵的钢琴是一架1888年生产的斯坦威（steinway）牌 三角钢琴，1980年在纽约以18万英镑的高价被拍卖。钢琴因其独特的音响，88个琴键的全音域，历来受到作曲家的钟爱。在流行、摇滚、爵士以及古典等几乎所有的音乐形式中都扮演了重要的角色。</p>
     <audio controls>
-        <source src="material/钢琴.mp3" typr="audio/ogg">
+        <source src="https://sharefs.yun.kugou.com/202101021448/be7699e27f0815583fb93e84f9818cd5/G196/M07/1A/07/ZIcBAF5udYKATs7dAEGhHojWQSI088.mp3" typr="audio/ogg">
     </audio>
+</div>
+
+<style>
+    .sidebar{
+        width: 35px; 
+        position: fixed; 
+        left: 0; top: 0; height: 100%; 
+        overflow: hidden; 
+        transition:width 0.7s;
+        background-color: rgba(6, 8, 22, 0.5);
+    }
+
+    .sidebar:hover
+    {
+        width:130px;
+    }
+
+    .sidebar h2{
+        color: aliceblue;
+        position: relative;
+        left: 10%;
+    }
+
+    .sidebar ul li {
+        margin-top: 10%;list-style: none;text-align: center;
+    }
+    .sidebar ul li a{
+        position: relative;
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 120%;
+
+    }
+    .sidebar ul li a:hover{
+        font-size: 128%;
+        transition: 0.3s;
+    }
+    #sidecontent{
+        position: relative;
+        top: 10%;
+    }
+    #s1 ul li a{
+        color: white;
+        display: none;
+    }
+    #s1:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #s2 ul li a{
+        color: white;
+        display: none;
+    }
+    #s2:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #s3 ul li a{
+        color: white;
+        display: none;
+    }
+    #s3:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #s4 ul li a{
+        color: white;
+        display: none;
+    }
+    #s4:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #sidecontent ul li ul li a:hover{
+        color: rgb(91, 108, 165);
+    }
+</style>
+
+<div class="sidebar">
+    <div id="sidecontent">
+        <h2>乐器分类</h2>
+        <ul>
+            <li id="s1"><a href="#">钢琴风琴</a><ul>
+                <li><a href="piano.html">钢琴</a></li>
+                <li><a href="piano.html">风琴</a></li>
+            </ul></li>
+            <li id="s2"><a href="#">交响管弦</a><ul>
+                <li><a href="piano.html">双簧管</a></li>
+                <li><a href="piano.html">小提琴</a></li>
+                <li><a href="piano.html">中提琴</a></li>
+                <li><a href="piano.html">大提琴</a></li>
+                <li><a href="piano.html">铜管</a></li>
+            </ul></li>
+            <li id="s3"><a href="#">民族乐器</a><ul>
+                <li><a href="piano.html">笛子</a></li>
+                <li><a href="piano.html">古筝</a></li>
+                <li><a href="piano.html">二胡</a></li>
+            </ul></li>
+            <li id="s4"><a href="#">打击鼓组</a><ul>
+                <li><a href="piano.html">架子鼓</a></li>
+                <li><a href="piano.html">太鼓</a></li>
+            </ul></li>
+        </ul>
+    </div>
 </div>

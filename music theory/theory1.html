@@ -1,0 +1,368 @@
+<!doctype html>
+<title>乐器网</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset = "utf-8">
+
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.featureCarousel.js"></script>  
+
+<link  rel="stylesheet" href="css/featureCarousel.css"  charset="utf-8"> 
+
+
+
+<style type = "text/css">
+    *{
+        margin: 0px;
+        padding:0px;
+    }
+    
+    #timeBox{
+        color: #ffffff;
+        padding-left: 2.2%;
+    }
+
+    #user{
+        color: #ffffff;
+        position: absolute;
+        right: 3%;
+    } a{color: #ffffff; text-decoration: none;}
+
+    #featureCarousel{
+        position: absolute;
+        background-color: #e7cba8;
+        right: 25%;
+        height: 0%;
+    }
+
+    .menu{
+        padding-top: 0px;
+        width:1000px;
+        height:35px;
+    }
+    .menu ul{
+        list-style: none;
+        position: absolute;
+        left: 38%;
+    }
+    .menu ul li{
+        position:relative;
+        width:120px;
+        line-height: 35px;
+        text-align:center;
+        float:left;
+    }
+    .menu table{
+        position:absolute;
+        top:35px;
+        left:0;
+    }
+    .menu ul li a{
+        line-height:35px;
+        display:block;
+        text-align:center;
+        color:rgb(255, 255, 255);
+        font-size: 20px;
+        text-decoration: none;
+    }
+    .menu ul li a:hover{
+        color: rgb(78, 60, 60);
+        background: url() no-repeat;
+    }
+    .menu ul li ul{
+        width:120px;
+        visibility: hidden;
+        position: absolute;
+        text-align: left;
+        left:0px;
+        top: 0px;
+        background-color: #ffffff;
+    }
+    .menu ul li:hover ul{
+        visibility: visible;
+    }
+    .menu ul li ul li ul{
+        width:120px;
+        visibility: hidden;
+        position: absolute;
+        text-align: left;
+        left:121px;
+        top: 0px;
+        background-color: #ffffff;
+    }
+    .menu ul li ul li:hover ul {
+        visibility: visible;
+    }
+    .menu ul li ul li{
+        position: relative;
+        height:35px;
+        line-height:35px;
+        font-size: 14px;
+        left: -10%;
+    }
+    .menu ul li ul li a{
+        display: block;
+        color: #666;
+    }
+    .menu ul li ul li a:hover{
+        background:#e7cba8;
+    }
+    body{
+        background-image: url(../material/4.jpg);
+    }
+    </style>
+
+
+<body onload="checkCookie()"></body>
+
+<script>
+    var v = setInterval(function(){timeUpdate()},1000);
+    function timeUpdate(){
+        var d = new Date();
+        var t = d.toLocaleTimeString();
+        document.getElementById("time").innerHTML=t;
+    }
+
+    function setCookie(cname,cvalue,exdays){
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays*24*60*60*1000));
+    var expires = "expires="+d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+    function getCookie(cname){
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+    }
+    return "";
+}
+
+    function checkCookie(){
+    var user=getCookie("username");
+    if (user!=""){
+        alert("欢迎用户 " + user );
+        document.getElementById("userID").innerHTML="用户名: " +user;
+        document.getElementById("register").remove();
+    }
+}
+    function createCookie(){
+        if (user!="" && user!=null){
+            user = prompt("请输入你的ID:","");
+            setCookie("username",user,30);
+            alert("注册成功");
+            location.reload(); 
+    }
+}
+    function deleteCookie(){
+        if (user!="" && user!=null){
+            setCookie("username",user,-30);
+            alert("注销成功!");
+            location.reload(); 
+    }
+    }
+</script>
+
+<style>
+    .sidebar{
+        width: 35px; 
+        position: fixed; 
+        left: 0; top: 0; height: 100%; 
+        overflow: hidden; 
+        transition:width 0.7s;
+        background-color: rgba(6, 8, 22, 0.5);
+    }
+
+    .sidebar:hover
+    {
+        width:130px;
+    }
+
+    .sidebar h2{
+        color: aliceblue;
+        position: relative;
+        left: 10%;
+    }
+
+    .sidebar ul li {
+        margin-top: 10%;list-style: none;text-align: center;
+    }
+    .sidebar ul li a{
+        position: relative;
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 120%;
+
+    }
+    .sidebar ul li a:hover{
+        font-size: 128%;
+        transition: 0.3s;
+    }
+    #sidecontent{
+        position: relative;
+        top: 10%;
+    }
+    #s1 ul li a{
+        color: white;
+        display: none;
+    }
+    #s1:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #s2 ul li a{
+        color: white;
+        display: none;
+    }
+    #s2:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #s3 ul li a{
+        color: white;
+        display: none;
+    }
+    #s3:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #s4 ul li a{
+        color: white;
+        display: none;
+    }
+    #s4:hover ul li a{
+        color: rgb(144, 180, 247);
+        display: block;
+    }
+    #sidecontent ul li ul li a:hover{
+        color: rgb(91, 108, 165);
+    }
+</style>
+
+<div class="sidebar">
+    <div id="sidecontent">
+        <h2>乐器分类</h2>
+        <ul>
+            <li id="s1"><a href="#">钢琴风琴</a><ul>
+                <li><a href="../piano/piano.html">钢琴</a></li>
+                <li><a href="../piano/piano.html">风琴</a></li>
+            </ul></li>
+            <li id="s2"><a href="#">交响管弦</a><ul>
+                <li><a href="../piano/piano.html">双簧管</a></li>
+                <li><a href="../piano/piano.html">小提琴</a></li>
+                <li><a href="../piano/piano.html">中提琴</a></li>
+                <li><a href="../piano/piano.html">大提琴</a></li>
+                <li><a href="../piano/piano.html">铜管</a></li>
+            </ul></li>
+            <li id="s3"><a href="#">民族乐器</a><ul>
+                <li><a href="../piano/piano.html">笛子</a></li>
+                <li><a href="../piano/piano.html">古筝</a></li>
+                <li><a href="../piano/piano.html">二胡</a></li>
+            </ul></li>
+            <li id="s4"><a href="#">打击鼓组</a><ul>
+                <li><a href="../piano/piano.html">架子鼓</a></li>
+                <li><a href="../piano/piano.html">太鼓</a></li>
+            </ul></li>
+        </ul>
+    </div>
+</div>
+
+
+<header>
+    <div id="timeBox">
+    <p>当前时间是:</p>
+    <p id="time">加载中...</p>
+    </div>
+</header>
+
+<div id="user" onload="checkCookie()">
+    <a href="#"  id="register" onclick="createCookie()">注册</a><br><p id="userID"></p>
+    <a href="#" onclick="deleteCookie()">注销</a>
+</div>
+
+<div class = "top">
+    <div class = "menu">
+        <ul>
+            <li><a href = "../index.html">首页</a></li>
+            <li><a href = "music theory.html">乐理知识</a></li>
+            <li><a href = "../feedback/feedback.html">反馈</a></li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    #content{
+        text-align: center;
+    }
+    article{
+        margin-top: 3%;
+        color: #ffffff;
+    }
+    section{
+        margin-top: 2%;
+        animation: anim 4s;
+    }
+    span{
+        color: rgb(182, 219, 253);
+    }
+    @keyframes anim{
+        from{opacity: 0.1;}
+        to{opacity: 1;}
+    }
+    footer{
+        margin-top: 3%;
+        text-align: center;
+    }
+    footer nav a{
+        color: rgb(55, 55, 121);
+    }
+    footer nav a:hover{
+        color: rgb(127, 108, 209);
+    }
+    nav{
+        opacity: 0.8;
+    }
+</style>
+
+<main>
+    <div id="content">
+        <article>
+            <h2>副属和弦</h2>
+            <section>
+                <h3>什么是副属和弦?</h3>
+                <p>所谓<span>副属和弦</span>，是指音乐和弦进程中，某大三和弦或大三属七和弦向其下方五度的大三，<br>
+                    小三，大三属七和弦解决时，该大三和弦或大三属七和弦即称副属大三和弦或副属七和弦。</p>
+            </section>
+            <section>
+                <h3>如何使用副属和弦？</h3>
+                <p>按照<span>副属和弦</span>的概念，我们把要接到的目标和弦看成是临时主和弦，然后再找这个调中的<br>
+                    五级属七和弦就OK了，小三，大三属七和弦解决时，该大三和弦或大三属七和弦即称副属<br>
+                    大三和弦或副属七和弦。写好了C调一级C和弦到四级F和弦的和声进行，在俩和弦之间加一<br>
+                    个<span>副属和弦</span>，我们只需把目标和弦也就是我们要接到的F和弦看成临时一级。F和弦为一级<br>
+                    的调也就是F调，那把F调的各级和弦先写出来，F大调的5级也就是图中标红的C7和弦，找<br>
+                    到了这个临时主和弦的属七和弦，就把它放在这个临时主和弦也就是F和弦的前面就行了</p>
+            </section>
+            <section>
+                <h3>副属和弦的延伸用法</h3>
+                <p><span>副属和弦</span>运用的是临时主和弦的思路，我们不妨循着这个思路再想一想，属和弦接到主和弦<br>
+                    理所当然，但属和弦前面是不是也可以加一个下属和弦？这样就形成了下属到属再到主的完<br>
+                    美进行，在流行歌中就是所谓的2-5-1。</p>
+            </section>
+            <section>
+                <h3>注意事项</h3>
+                <p><span>副属和弦</span>作为过渡和弦，最好不要用在强拍或占用太多拍，不然容易调式不稳定。另外，使<br>
+                    用时要考虑和弦与旋律的搭配，如果产极不和谐的效果建议放弃使用。
+
+                </p>
+            </section>
+        </article>
+    </div>
+
+    <footer>
+        <nav>
+            <a href="theory1.html">副属和弦</a>
+            <a href="theory1.html">压缩器</a>
+            <a href="theory1.html">离调和弦</a>
+            <a href="theory1.html">合成器</a>
+        </nav>
+    </footer>
+</main>
