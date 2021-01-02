@@ -82,6 +82,7 @@
     background:#e7cba8;
 }
     .theme{
+        font-family: "webfont" !important;
         padding-left: 50%;
         padding-top: 3%;
         font-size: 25px;
@@ -95,19 +96,32 @@
         padding-bottom: 7px;
         
     }
+    @font-face {
+    font-family: 'webfont';
+    font-display: swap;
+    src: url('字体/webfont.eot'); /* IE9 */
+    src: url('字体/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('字体/webfont.woff2') format('woff2'),
+    url('字体/webfont.woff') format('woff'), /* chrome、firefox */
+    url('字体/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('字体/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
     .p1{
+        font-family: "webfont" !important;
         padding-left: 40%;
         padding-right: 20%;
         padding-top: 3%;
-        font-size: 17px;
+        font-size: 25px;
         color: aliceblue;
     }
     .p2{
+        font-family: "webfont" !important;
         padding-left: 20%;
         padding-right: 20%;
         padding-top: 3%;
-        font-size: 17px;
+        font-size: 25px;
         color: aliceblue;
+        font-family: Times New Roman,"open-sans",sans-serif;
     }
     .content audio{
         padding-left: 20%;
